@@ -1,0 +1,13 @@
+{
+    "cep": [
+        {
+            "id" : "pdp",
+            "logradouro": "rua da mooca",
+            "bairro": "mooca",
+            "localidade": "Sao Paulo",
+            "estado": "Sao Paulo",
+            "uf": "SP"
+
+        }
+    ]
+}
