@@ -25,7 +25,6 @@ export function Home() {
             const promise = await axios.get(`https://brasilaberto.com/api/v1/zipcode/${cep}`)
             setEndereco(promise.data.result)
 
-
         } catch (error) {
             console.warn(error);
         }
