@@ -14,3 +14,22 @@ export const Input = styled.TextInput.attrs({
     font-family: 'MontserratAlternates_600SemiBold';
     color: #FFFFFF;
 `
+export const  InputRecover = styled(Input)`
+    margin-top: 25px;
+`
+
+export const InputVerify = styled.TextInput.attrs({
+    placeholderTextColor:"#FFFF"
+})`
+    width: 20%;
+    height: 68px;
+    align-items: center;
+    border: 1px;
+    border-radius: 5px;
+    border-color: white;
+    font-size: 45px;
+    font-family: 'MontserratAlternates_600SemiBold';
+    color: #FFFFFF;
+    text-align: center;
+    
+`

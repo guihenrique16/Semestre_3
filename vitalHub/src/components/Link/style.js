@@ -10,3 +10,9 @@ export const LinkMedium = styled.Text`
     margin-left: 20px;
     margin-bottom: 15px;
 `
+
+export const  LinkEnd = styled(LinkMedium)`
+    margin-top: 25px;
+    align-self: center;
+    margin-left: none;
+`

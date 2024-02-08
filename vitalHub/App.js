@@ -6,6 +6,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { Navegacao } from './src/Screens/Navegacao/Navegacao';
 import { Login } from './src/Screens/Login/Login';
+import { RecoverSenha } from './src/Screens/RecoverSenha/RecoverSenha';
+import { CheckEmail } from './src/Screens/CheckEmail/CheckEmail';
+import { ChangeSenha } from './src/Screens/ChangeSenha/ChangeSenha';
 
 
 const Stack = createNativeStackNavigator();
@@ -43,6 +46,21 @@ export default function App() {
             name="Login"
             component={Login}
             options={{title:"Login"}}
+          />
+          <Stack.Screen
+            name="RecoverSenha"
+            component={RecoverSenha}
+            options={{title:"RecoverSenha"}}
+          />
+          <Stack.Screen
+            name="CheckEmail"
+            component={CheckEmail}
+            options={{title:"CheckEmail"}}
+          />
+          <Stack.Screen
+            name="ChangeSenha"
+            component={ChangeSenha}
+            options={{title:"ChangeSenha"}}
           />
         </Stack.Navigator>
       </NavigationContainer>

@@ -1,4 +1,3 @@
-import { Link } from "@react-navigation/native"
 import { Container } from "../../components/Container/style"
 import { Logo } from "../../components/Logo/style"
 import { Title } from "../../components/Title/style"
@@ -6,7 +5,6 @@ import { Input } from "../../components/Input/style"
 import { LinkMedium } from "../../components/Link/style"
 import { ButtonTitle } from "../../components/ButtonTitle/style"
 import { Button, ButtonGoogle } from "../../components/Button/style"
-import { IconGoogle } from "../../components/IconGoogle/style"
 import { ButtonTitleGoogle } from "../../components/ButtonTitleGoogle/style"
 
 import { AntDesign } from '@expo/vector-icons';

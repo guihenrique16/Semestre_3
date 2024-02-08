@@ -19,3 +19,8 @@ export const  ButtonGoogle = styled(Button)`
     gap: 27px;
     margin-top: 25px;
 `
+
+export const  ButtonRecover = styled(Button)`
+    margin-top: 25px;
+`
+
