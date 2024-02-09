@@ -1,8 +1,12 @@
-import { Button, View } from "react-native"
+import { Button } from "react-native"
+import { ContainerNav } from "../../components/Container/style"
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export const Navegacao = ({navigation}) => {
     return(
-        <View>
+        <ContainerNav>
+            <FontAwesome5 name="hospital-symbol" size={45} color="black" />
+
             <Button
                 title="Login"
                 onPress={() => navigation.navigate("Login")}
@@ -19,6 +23,10 @@ export const Navegacao = ({navigation}) => {
                 title="Redefinir Senha"
                 onPress={() => navigation.navigate("ChangeSenha")}
             />
-        </View>
+            <Button
+                title="Cadastro"
+                onPress={() => navigation.navigate("Cadastro")}
+            />
+        </ContainerNav>
     )
 }

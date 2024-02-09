@@ -9,6 +9,8 @@ import { Login } from './src/Screens/Login/Login';
 import { RecoverSenha } from './src/Screens/RecoverSenha/RecoverSenha';
 import { CheckEmail } from './src/Screens/CheckEmail/CheckEmail';
 import { ChangeSenha } from './src/Screens/ChangeSenha/ChangeSenha';
+import { Cadastro } from './src/Screens/Cadastro/Cadastro';
+import { maedogois } from './src/Screens/Maedogois/maedogois';
 
 
 const Stack = createNativeStackNavigator();
@@ -61,6 +63,11 @@ export default function App() {
             name="ChangeSenha"
             component={ChangeSenha}
             options={{title:"ChangeSenha"}}
+          />
+          <Stack.Screen
+            name="Cadastro"
+            component={Cadastro}
+            options={{title:"Cadastro"}}
           />
         </Stack.Navigator>
       </NavigationContainer>
