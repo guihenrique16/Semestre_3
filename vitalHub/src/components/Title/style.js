@@ -11,3 +11,9 @@ export const TitleCheck = styled(Title)`
     margin-top: 25px;
 `
 
+export const TitlePerfil = styled(Title)`
+    margin-top: 25px;
+    color: #33303E;
+`
+
+

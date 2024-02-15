@@ -1,10 +1,10 @@
 import { Button } from "react-native"
-import { ContainerNav } from "../../components/Container/style"
+import { ContainerNavigation } from "../../components/Container/style"
 import { FontAwesome5 } from '@expo/vector-icons';
 
 export const Navegacao = ({navigation}) => {
     return(
-        <ContainerNav>
+        <ContainerNavigation>
             <FontAwesome5 name="hospital-symbol" size={45} color="black" />
 
             <Button
@@ -27,6 +27,10 @@ export const Navegacao = ({navigation}) => {
                 title="Cadastro"
                 onPress={() => navigation.navigate("Cadastro")}
             />
-        </ContainerNav>
+            <Button
+                title="Perfil"
+                onPress={() => navigation.navigate("Perfil")}
+            />
+        </ContainerNavigation>
     )
 }
