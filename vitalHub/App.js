@@ -11,6 +11,7 @@ import { CheckEmail } from './src/Screens/CheckEmail/CheckEmail';
 import { ChangeSenha } from './src/Screens/ChangeSenha/ChangeSenha';
 import { Cadastro } from './src/Screens/Cadastro/Cadastro';
 import { Perfil } from './src/Screens/Perfil/Perfil';
+import { Home } from './src/Screens/Home/Home';
 
 
 
@@ -74,6 +75,11 @@ export default function App() {
             name="Perfil"
             component={Perfil}
             options={{title:"Perfil"}}
+          />
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{title:"Home"}}
           />
         </Stack.Navigator>
       </NavigationContainer>

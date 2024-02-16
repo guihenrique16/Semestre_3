@@ -17,6 +17,14 @@ export const Input = styled.TextInput.attrs({
 export const  InputRecover = styled(Input)`
     margin-top: 25px;
 `
+export const  InputPerfil = styled(Input).attrs({
+    placeholderTextColor:"#33303E"
+})`
+    background-color: #F5F3F3;
+    color: #33303E;
+    margin-top: none;
+    margin-left:20px;
+`
 
 export const InputVerify = styled.TextInput.attrs({
     placeholderTextColor:"#FFFF"

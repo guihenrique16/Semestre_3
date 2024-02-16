@@ -8,3 +8,7 @@ export const SubTitle = styled.Text`
     text-align: center;
     margin-top: 10px;
 `
+
+export const SubTitlePerfil = styled(SubTitle)`
+    margin-bottom: 25px;
+`
