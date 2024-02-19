@@ -6,6 +6,13 @@ export const BoxUser = styled.View`
     gap: 10px;
 `
 
+export const BoxIcon = styled.View`
+    align-items: center;
+    /* border: 1px; */
+    justify-content: center;
+`
+
+
 export const ImageUser = styled.Image`
     width: 60px;
     height: 60px;

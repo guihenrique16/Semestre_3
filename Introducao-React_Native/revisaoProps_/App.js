@@ -24,11 +24,11 @@ export default function App() {
     { id: "3", name: "Felix", age: "19" }
   ]
 
-  const jogosList = [
-    { id: "1", name: "Raimbow six", descricao: "melhor jogo de tiro", preco: "199,99" },
-    { id: "2", name: "Fifa", descricao: "jogo realista de futebol", preco: "199,99" },
-    { id: "3", name: "valorant", descricao: "rpg", preco: "199,99" }
-  ]
+  // const jogosList = [
+  //   { id: "1", name: "Raimbow six", descricao: "melhor jogo de tiro", preco: "199,99" },
+  //   { id: "2", name: "Fifa", descricao: "jogo realista de futebol", preco: "199,99" },
+  //   { id: "3", name: "valorant", descricao: "rpg", preco: "199,99" }
+  // ]
 
   return (
     <SafeAreaView>
@@ -40,7 +40,7 @@ export default function App() {
         renderItem={({ item }) => <Person name={item.name} age={item.age} />}
       />
 
-      <FlatList
+      {/* <FlatList
         data={jogosList}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>
@@ -48,8 +48,9 @@ export default function App() {
             nameGame={item.nameGame}
             descricao={item.descricao}
             preco={item.preco}
-          />}
-      />
+          />
+        }
+      /> */}
 
     </SafeAreaView>
   );
