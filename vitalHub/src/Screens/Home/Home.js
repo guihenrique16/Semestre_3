@@ -4,18 +4,21 @@ import { CalendarHome } from "../../components/CalendarHome/calendarHome"
 import { ContainerPerfil } from "../../components/Container/style"
 import { Header } from "../../components/Header/Header"
 import { FilterAppointment } from "./style"
-import { FlatList } from "react-native"
-import { Card } from "../../components/Card/Card"
+import { ListComponent } from "../../components/List/list"
+import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard"
+
+const Consultas = [
+    { id: "1", name: "Guilherme", situacao: "pendente" },
+    { id: "2", name: "Gelipe", situacao: "realizado" },
+    { id: "3", name: "Felix", situacao: "cancelado" },
+    { id: "4", name: "Mumu", situacao: "cancelado" },
+    { id: "5", name: "Arteta", situacao: "cancelado" },
+    { id: "6", name: "Conha", situacao: "realizado" }
+]
 
 export const Home = () => {
 
     const [statusLista, setStatusLista] = useState("Pendente")
-
-    const cardList = [
-        { id: "1", name: "Guilherme", age: "18 anos" },
-        { id: "2", name: "Gelipe", age: "45 anos" },
-        { id: "3", name: "Felix", age: "19 anos" }
-    ]
 
     return (
         <ContainerPerfil>
@@ -28,29 +31,43 @@ export const Home = () => {
 
                 <BtnListAppointment
                     textButton={"Agendadas"}
-                    clickButton={statusLista === "Pendente"}
-                    onPress={() => setStatusLista("Pendente")}
+                    clickButton={statusLista === "pendente"}
+                    onPress={() => setStatusLista("pendente")}
                 />
 
                 <BtnListAppointment
                     textButton={"Realizadas"}
-                    clickButton={statusLista === "Realizadas"}
-                    onPress={() => setStatusLista("Realizadas")}
+                    clickButton={statusLista === "realizado"}
+                    onPress={() => setStatusLista("realizado")}
                 />
 
                 <BtnListAppointment
                     textButton={"Canceladas"}
-                    clickButton={statusLista === "Canceladas"}
-                    onPress={() => setStatusLista("Canceladas")}
+                    clickButton={statusLista === "cancelado"}
+                    onPress={() => setStatusLista("cancelado")}
                 />
 
             </FilterAppointment>
 
-            <FlatList
-                data={cardList}
+
+
+            <ListComponent
+                data={Consultas}
                 keyExtractor={(item) => item.id}
-                renderItem={({ item }) => <Card name={item.name} age={item.age} />}
+
+                renderItem={({item}) =>
+                    statusLista == item.situacao && (
+                        <AppointmentCard
+                            situacao={item.situacao}
+                        />
+                    )
+
+                    // <AppointmentCard/>
+                }
             />
+
+
+
 
         </ContainerPerfil>
     )
