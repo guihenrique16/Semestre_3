@@ -4,7 +4,7 @@ import { ImagePerfil } from "../../components/Logo/style";
 import { SubTitlePerfil } from "../../components/Text/style";
 import { TitlePerfil } from "../../components/Title/style";
 import { ButtonTitle } from "../../components/ButtonTitle/style"
-import { Button, ButtonEditPerfil } from "../../components/Button/style"
+import { Button, ButtonEditPerfil, ButtonSairPerfil } from "../../components/Button/style"
 
 export const Perfil = () => {
     return (
@@ -61,6 +61,10 @@ export const Perfil = () => {
                     <ButtonEditPerfil>
                         <ButtonTitle>Editar</ButtonTitle>
                     </ButtonEditPerfil>
+
+                    <ButtonSairPerfil>
+                        <ButtonTitle>Sair</ButtonTitle>
+                    </ButtonSairPerfil>
 
                 </MainContent>
             </MainContentScroll>

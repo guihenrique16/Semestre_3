@@ -16,3 +16,8 @@ export const  LinkEnd = styled(LinkMedium)`
     align-self: center;
     margin-left: none;
 `
+export const  LinkEndModal = styled(LinkMedium)`
+    color: #344F8F;
+    align-self: center;
+    margin-top: 30px;
+`

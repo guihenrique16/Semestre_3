@@ -7,8 +7,12 @@ export const Title = styled.Text`
     margin-bottom: 5px;
 `
 
+
 export const TitleCheck = styled(Title)`
     margin-top: 25px;
+`
+export const TitleModal = styled(Title)`
+    color: #344F8F;
 `
 
 export const TitlePerfil = styled(Title)`

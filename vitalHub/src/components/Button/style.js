@@ -24,6 +24,18 @@ export const  ButtonRecover = styled(Button)`
     margin-top: 25px;
 `
 export const  ButtonEditPerfil = styled(Button)`
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 `
-
+export const  ModalButton = styled(Button)`
+`
+export const ButtonSairPerfil = styled.TouchableOpacity`
+    width: 60%;
+    height: 50px;
+    background-color: #ACABB7;
+    border: 1px #ACABB7;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 12px 8px 12px 8px ;
+    margin-bottom: 50px;
+`

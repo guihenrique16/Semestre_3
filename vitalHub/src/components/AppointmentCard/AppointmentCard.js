@@ -35,11 +35,11 @@ export const AppointmentCard = ({
                             </>
                         ) : situacao == "pendente" ? (
                             <ButtonCard >
-                                <ButtonText situacao={situacao}>Cancelar</ButtonText>
+                                <ButtonText situacao={situacao} onPress={onPressCancel}>Cancelar</ButtonText>
                             </ButtonCard>
                         ) : (
                             <ButtonCard >
-                                <ButtonText situacao={situacao}>Ver Prontuario</ButtonText>
+                                <ButtonText situacao={situacao} onPress={onPressAppointment}>Ver Prontuario</ButtonText>
                             </ButtonCard>
                         )
                     }

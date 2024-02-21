@@ -34,7 +34,7 @@ export const ContainerPerfil = styled(Container)`
 `
 export const ContainerInputPerfil = styled.View`
     flex: 1;
-    width: 100%;
+    width: 90%;
     align-items: center;
     background-color: #ffff;
     /* margin-left: 25px; */

@@ -111,12 +111,12 @@ const styles = StyleSheet.create({
         fontSize: 14
     },
     selectedContainerStyle: {
-        backgroundColor: `#60BFC5`
+        backgroundColor: `#496BBA`
     },
     selectedAnimationStyle: {
         type: "border",
         duration: 200,
         borderWidth: 2,
-        borderHighlightColor: "#49B3BA"
+        borderHighlightColor: "#496BBA"
     }
 })

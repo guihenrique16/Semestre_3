@@ -9,14 +9,16 @@ export const ContainerCardList = styled.View`
     border-radius: 5px;
     flex-direction: row;
     gap: 10px;
-    background-color: lightblue;
+    /* background-color: #496BBA; */
     box-shadow: 4px 4px 15px rgba(0,0,0,0.08);
+    border: 2px #496BBA;
 
 `
 export const ProfileImage = styled.Image`
     width: 77px;
     height: 80px;
     border-radius: 5px;
+    border: 1px #496BBA;
 `
 
 export const ContentCard = styled.View`
