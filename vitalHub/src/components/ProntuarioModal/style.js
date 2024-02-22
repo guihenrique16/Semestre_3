@@ -33,5 +33,5 @@ export const ModalImage = styled.Image`
     height: 181px;
     border-radius: 10px;
     margin-bottom: 20px;
-    border: 1px #496BBA;
+    border: 1px solid #496BBA;
 `

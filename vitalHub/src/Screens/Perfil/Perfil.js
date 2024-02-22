@@ -44,7 +44,6 @@ export const Perfil = () => {
                             fieldWidth={45}
                             textLabel='CEP:'
                             placeholder='06548-909'
-                        // fieldValue={endereco.district}
                         />
                         <BoxInput
                             fieldWidth={45}

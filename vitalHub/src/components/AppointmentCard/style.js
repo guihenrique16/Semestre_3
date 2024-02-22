@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {Title} from "../Title/style"
+import { Title } from "../Title/style"
 
 export const ContainerCardList = styled.View`
     width: 90%;
@@ -9,9 +9,14 @@ export const ContainerCardList = styled.View`
     border-radius: 5px;
     flex-direction: row;
     gap: 10px;
-    /* background-color: #496BBA; */
+    background-color: #FFFF;
     box-shadow: 4px 4px 15px rgba(0,0,0,0.08);
-    border: 2px #496BBA;
+    shadow-color: "black";
+    shadow-opacity: 0.25;
+    shadow-offset: 20px 20px;
+    shadow-radius: 15px;
+    elevation: 10;
+    /* border: 2px #496BBA; */
 
 `
 export const ProfileImage = styled.Image`
@@ -44,7 +49,7 @@ export const TextAge = styled.Text`
 `
 export const TextBold = styled.Text`
     font-family: "Quicksand_600SemiBold";
-    color: ${(props) => props.situacao == "pendente" ? "#49B3BA": "#8C8A97"};
+    color: ${(props) => props.situacao == "pendente" ? "#49B3BA" : "#8C8A97"};
 `
 export const ViewRow = styled.View`
     width: 100%;
@@ -58,7 +63,7 @@ export const ClockCard = styled.View`
     padding: 4px 23px;
     border-radius: 5px;
     align-items:center;
-    background-color: ${(props) => props.situacao == "pendente" ? "#E8FCFD": "#F1F1F1"};
+    background-color: ${(props) => props.situacao == "pendente" ? "#E8FCFD" : "#F1F1F1"};
 `
 export const ButtonCard = styled.TouchableOpacity`
 `
@@ -66,5 +71,5 @@ export const ButtonCard = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
     font-size: 12px;
     font-family: "MontserratAlternates_500Medium";
-    color: ${(props) => props.situacao == "pendente" ? "#C81D25": "#344F8F"};
+    color: ${(props) => props.situacao == "pendente" ? "#C81D25" : "#344F8F"};
 `

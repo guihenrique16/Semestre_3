@@ -20,10 +20,12 @@ export const  InputRecover = styled(Input)`
 export const  InputPerfil = styled(Input).attrs({
     placeholderTextColor:"#33303E"
 })`
+    width: 100%;
     background-color: #F5F3F3;
     color: #33303E;
-    margin-top: none;
-    /* margin-left:20px; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: ${props => `${props.fieldHeight}px`}; 
 `
 
 export const InputVerify = styled.TextInput.attrs({

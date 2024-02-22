@@ -12,6 +12,7 @@ import { ChangeSenha } from './src/Screens/ChangeSenha/ChangeSenha';
 import { Cadastro } from './src/Screens/Cadastro/Cadastro';
 import { Perfil } from './src/Screens/Perfil/Perfil';
 import { Home } from './src/Screens/Home/Home';
+import { InsercaoProntuario } from './src/Screens/InsercaoProntuario/InsercaoProntuario';
 
 
 
@@ -82,6 +83,11 @@ export default function App() {
             name="Home"
             component={Home}
             options={{title:"Home"}}
+          />
+          <Stack.Screen
+            name="InsercaoProntuario"
+            component={InsercaoProntuario}
+            options={{title:"InsercaoProntuario"}}
           />
         </Stack.Navigator>
       </NavigationContainer>

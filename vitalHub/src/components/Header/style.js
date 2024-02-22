@@ -20,10 +20,16 @@ export const ImageUser = styled.Image`
 `
 
 export const DataUser = styled.View`
+    gap: 3px;
 `
 
 export const TextDefault = styled.Text`
+    font-family: "Quicksand_500Medium";
+    font-size: 14;
 `
 
 export const NameUser = styled.Text`
+    font-family: "MontserratAlternates_600SemiBold";
+    font-size: 16;
+    color: #FBFBFB;
 `
