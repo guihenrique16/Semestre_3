@@ -4,7 +4,9 @@ import { Label } from "../Label"
 
 export const BoxInput = ({
     fieldWidth = 100,
-    fieldHeight=50,
+    fieldHeight = 50,
+    placeholderColor = "#33303E",
+    BorderColor = "#F5F3F3",
     editable = false,
     textLabel,
     placeholder,
@@ -13,13 +15,15 @@ export const BoxInput = ({
     keyType = 'default',
     maxLength
 }) => {
-    return(
+    return (
         <FieldContent fieldWidth={fieldWidth}>
             <Label
                 textLabel={textLabel}
             />
 
             <InputForm
+                BorderColor={BorderColor}
+                placeholderColor={placeholderColor}
                 fieldHeight={fieldHeight}
                 editable={editable}
                 placeholder={placeholder}

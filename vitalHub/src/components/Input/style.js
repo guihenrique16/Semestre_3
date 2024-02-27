@@ -18,7 +18,7 @@ export const  InputRecover = styled(Input)`
     margin-top: 25px;
 `
 export const  InputPerfil = styled(Input).attrs({
-    placeholderTextColor:"#33303E"
+    placeholderTextColor: props => `${props.placeholderColor}`
 })`
     width: 100%;
     background-color: #F5F3F3;
@@ -26,6 +26,7 @@ export const  InputPerfil = styled(Input).attrs({
     margin-top: 10px;
     margin-bottom: 20px;
     height: ${props => `${props.fieldHeight}px`}; 
+    border: 2px solid ${props => `${props.BorderColor}`}; 
 `
 
 export const InputVerify = styled.TextInput.attrs({

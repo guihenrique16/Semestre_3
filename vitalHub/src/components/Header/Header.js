@@ -12,7 +12,7 @@ export const Header = () => {
 
                 <DataUser>
                     <TextDefault>Bem vindo!</TextDefault>
-                    <NameUser>Dr. Claudio</NameUser>
+                    <NameUser>Dr.Mumu</NameUser>
                 </DataUser>
 
             </BoxUser>

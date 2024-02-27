@@ -13,6 +13,7 @@ import { Cadastro } from './src/Screens/Cadastro/Cadastro';
 import { Perfil } from './src/Screens/Perfil/Perfil';
 import { Home } from './src/Screens/Home/Home';
 import { InsercaoProntuario } from './src/Screens/InsercaoProntuario/InsercaoProntuario';
+import { homePaciente } from './src/Screens/HomePaciente/HomePaciente';
 
 
 
@@ -88,6 +89,11 @@ export default function App() {
             name="InsercaoProntuario"
             component={InsercaoProntuario}
             options={{title:"InsercaoProntuario"}}
+          />
+          <Stack.Screen
+            name="homePaciente"
+            component={homePaciente}
+            options={{title:"homePaciente"}}
           />
         </Stack.Navigator>
       </NavigationContainer>
