@@ -13,6 +13,7 @@ export const TitleCheck = styled(Title)`
 `
 export const TitleModal = styled(Title)`
     color: #344F8F;
+    margin-top: 30px;
 `
 
 export const TitlePerfil = styled(Title)`

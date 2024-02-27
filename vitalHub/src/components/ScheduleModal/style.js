@@ -37,7 +37,7 @@ export const Button = styled.TouchableOpacity`
 `
 
 export const TextButton = styled.Text`
-    font-size: 14;
+    font-size: 14px;
     font-family: "MontserratAlternates_600SemiBold";
     color: #34898F;
 `

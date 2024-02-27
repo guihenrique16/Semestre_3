@@ -66,6 +66,7 @@ export const Home = () => {
                     statusLista == item.situacao && (
                         <AppointmentCard
                             situacao={item.situacao}
+                            informacao={item}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
 

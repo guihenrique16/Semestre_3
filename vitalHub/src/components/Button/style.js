@@ -39,3 +39,8 @@ export const ButtonSairPerfil = styled.TouchableOpacity`
     padding: 12px 8px 12px 8px ;
     margin-bottom: 50px;
 `
+export const ButtonEditInsercao = styled(ButtonSairPerfil)`
+    width: 90%;
+    margin-bottom: none;
+    margin-top: 30px;
+`

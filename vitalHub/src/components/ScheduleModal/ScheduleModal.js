@@ -51,7 +51,7 @@ export const ScheduleModal = ({
 
 
                     <ModalButton>
-                        <ButtonTitle>Inserir Prontuario</ButtonTitle>
+                        <ButtonTitle>Continuar</ButtonTitle>
                     </ModalButton>
 
                     <LinkEndModal onPress={() => setShowModalSchedule(false)}>Cancelar</LinkEndModal>

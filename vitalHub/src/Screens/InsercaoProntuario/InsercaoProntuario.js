@@ -1,5 +1,5 @@
 import { BoxInput } from "../../components/BoxInput"
-import { Button } from "../../components/Button/style"
+import { Button, ButtonEditInsercao } from "../../components/Button/style"
 import { ButtonTitle } from "../../components/ButtonTitle/style"
 import { ContainerForm, ContainerPerfil, MainContent, MainContentScroll } from "../../components/Container/style"
 import { LinkEndModal } from "../../components/Link/style"
@@ -46,6 +46,9 @@ export const InsercaoProntuario = () => {
                     <Button>
                         <ButtonTitle>Salvar</ButtonTitle>
                     </Button>
+                    <ButtonEditInsercao>
+                        <ButtonTitle>Editar</ButtonTitle>
+                    </ButtonEditInsercao>
 
                     <LinkEndModal>Cancelar</LinkEndModal>
 

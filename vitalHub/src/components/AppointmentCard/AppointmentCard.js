@@ -4,7 +4,8 @@ import { ButtonCard, ButtonText, ClockCard, ContainerCardList, ContentCard, Data
 export const AppointmentCard = ({
     situacao = "pendente",
     onPressCancel,
-    onPressAppointment
+    onPressAppointment,
+    informacao
 }) => {
     return (
         <ContainerCardList>
@@ -14,7 +15,7 @@ export const AppointmentCard = ({
             <ContentCard>
                 <DataProfileCard>
 
-                    <ProfileName>Gelipe Felix</ProfileName>
+                    <ProfileName>{informacao.name}</ProfileName>
 
                     <ProfileData>
                         <TextAge>22 Anos</TextAge>

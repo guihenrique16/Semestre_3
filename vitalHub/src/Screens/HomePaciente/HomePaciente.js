@@ -23,7 +23,7 @@ const Consultas = [
     { id: "9", name: "Conha", situacao: "realizado" }
 ]
 
-export const homePaciente = () => {
+export const HomePaciente = () => {
 
     const [statusLista, setStatusLista] = useState("pendente")
 
@@ -65,14 +65,15 @@ export const homePaciente = () => {
                 keyExtractor={(item) => item.id}
 
                 renderItem={({ item }) =>
-                    statusLista == item.situacao && (
+                    statusLista == item.situacao ? (
                         <AppointmentCard
                             situacao={item.situacao}
+                            informacao={item}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
 
-                        />
-                    )
+                        /> 
+                    ) : null
                 }
 
                 showsVerticalScrollIndicator={false}
