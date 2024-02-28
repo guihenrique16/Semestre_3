@@ -2,22 +2,32 @@ import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { ButtonContent, CalendarText, CalendarView, Container, DataProfileCard, DataProfileCard2, LocalText, StarText, StarView, TitleClinica } from './style';
 
-export const ButtonCardClinica = () => {
+export const ButtonCardClinica = ({
+    name,
+    stars,
+    local,
+    operatingDays,
+    selected,
+    onPress
+}) => {
     return (
         <Container>
-            <ButtonContent>
+            <ButtonContent 
+                onPress={onPress}
+                ClickButton={selected}
+            >
                 <DataProfileCard>
-                    <TitleClinica>flabergasted</TitleClinica>
-                    <LocalText>Sao Paulo, SP</LocalText>
+                    <TitleClinica>{name}</TitleClinica>
+                    <LocalText>{local}</LocalText>
                 </DataProfileCard>
                 <DataProfileCard2>
                     <StarView>
                         <AntDesign name="star" size={20} color="#F9A620" />
-                        <StarText>4,5</StarText>
+                        <StarText>{stars}</StarText>
                     </StarView>
                     <CalendarView>
                         <MaterialCommunityIcons name="calendar-outline" size={14} color="#49B3BA" />
-                        <CalendarText>Seg-Sex</CalendarText>
+                        <CalendarText>{operatingDays}</CalendarText>
                     </CalendarView>
                 </DataProfileCard2>
             </ButtonContent>

@@ -1,24 +1,43 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.View`
     flex: 1;
     align-items: center;
+    /* border: 1px solid black; */
+    justify-content: center;
+    padding: 10px 0px 20px 0px;
+    margin-top: 10px;
 `
 export const ButtonContent = styled.TouchableOpacity`
     width: 85%;
     height: 84px;
-    border: 2px solid #496BBA;
     border-radius: 5px;
-    margin-bottom: 12px;
     flex-direction: row;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.08);
+    shadow-color: "black";
+    shadow-opacity: 0.25;
+    shadow-offset: 20px 20px;
+    shadow-radius: 15px;
+    elevation: 10;
+    background-color: white;
+    
+    ${props => props.ClickButton ? css`
+        border: 2px solid #496BBA;
+    `
+    : css`
+        border: 1px solid white;
+    `}
+
+    
 `
 export const DataProfileCard = styled.View`
-    width: 50%;
+    width: 70%;
     height: 100%;
     /* border: 1px solid black; */
     padding: 18px 18px 18px 20px;
 `
 export const DataProfileCard2 = styled(DataProfileCard)`
+    width: 30%;
     padding: 18px 18px 10px 18px;
     gap: 10px;
     align-items: flex-end;

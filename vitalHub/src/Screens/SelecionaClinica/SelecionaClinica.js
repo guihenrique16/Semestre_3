@@ -1,44 +1,83 @@
 import { useState } from "react"
 import { ButtonCardClinica } from "../../components/ButtonCardClinica/ButtonCardClinica"
-import { ContainerPerfil } from "../../components/Container/style"
+import { ContainerPerfil, MainContent, MainContentScroll } from "../../components/Container/style"
 import { ListComponent } from "../../components/List/list"
 import { TitleModal } from "../../components/Title/style"
 import { Button } from "../../components/Button/style"
 import { ButtonTitle } from "../../components/ButtonTitle/style"
 import { LinkEndModal } from "../../components/Link/style"
 
-const Clinicas = [
-    { id: "1", name: "Guilherme", situacao: "pendente" },
-    { id: "2", name: "Gelipe", situacao: "realizado" },
-    { id: "3", name: "Felix", situacao: "cancelado" },
-    { id: "4", name: "Mumu", situacao: "cancelado" }
-]
+
 
 export const SelecionaClinica = () => {
+    const [selected, setSelected] = useState("")
+    const [nameClinic, setNameClinic]= useState("")
 
-    const [statusLista, setStatusLista] = useState("")
+    const [clinica, setClinica] = useState([
+        {
+            id: "1",
+            name: "Clínica Natureh",
+            star: "4,5",
+            local: "Sao Paulo, SP",
+            operatingDays: "Seg-Sex",
+        },
+        {
+            id: "2",
+            name: "Diamond Pró-Mulher",
+            star: "4,8",
+            local: "Sao Paulo, SP",
+            operatingDays: "Seg-Sex",
+        },
+        {
+            id: "3",
+            name: "Clinica Villa Lobos",
+            star: "4,2",
+            local: "Sao Paulo, SP",
+            operatingDays: "Seg-Sab",
+        },
+        {
+            id: "4",
+            name: "SP Oncologia Clínica",
+            star: "5,0",
+            local: "Sao Paulo, SP",
+            operatingDays: "Seg-Sab",
+        },
+    ]);
 
     return (
         <ContainerPerfil>
-            <TitleModal>Selecionar Clinica</TitleModal>
+            <MainContentScroll>
+                <MainContent>
+                    <TitleModal>Selecionar Clinica</TitleModal>
 
-            <ListComponent
-                data={Clinicas}
-                keyExtractor={(item) => item.id}
+                    <ListComponent
+                        data={clinica}
+                        keyExtractor={(item) => item.id}
 
-                renderItem={({ item }) =>
-                    <ButtonCardClinica />
-                }
+                        renderItem={({ item }) =>
+                            <ButtonCardClinica
+                                name={item.name}
+                                stars={item.star}
+                                local={item.local}
+                                operatingDays={item.operatingDays}
+                                selected={item.name === selected}
+                                onPress={() => {
+                                    setSelected(item.name);
+                                }}
+                            />
+                        }
 
-                showsVerticalScrollIndicator={false}
-            />
+                        showsVerticalScrollIndicator={false}
+                        scrollEnabled={false}
+                    />
 
-            <Button>
-                <ButtonTitle>Continuar</ButtonTitle>
-            </Button>
+                    <Button>
+                        <ButtonTitle>Continuar</ButtonTitle>
+                    </Button>
 
-            <LinkEndModal>Cancelar</LinkEndModal>
-
+                    <LinkEndModal>Cancelar</LinkEndModal>
+                </MainContent>
+            </MainContentScroll>
         </ContainerPerfil>
 
     )
