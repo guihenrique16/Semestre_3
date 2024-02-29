@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "../../components/Button/style";
 import { ButtonTitle } from "../../components/ButtonTitle/style";
 import { ContainerPerfil, MainContent, MainContentScroll } from "../../components/Container/style";
 import { LinkEndModal } from "../../components/Link/style";
 import { TitleModal } from "../../components/Title/style";
+import { ListComponent } from "../../components/List/list";
+import { ButtonCardMedico } from "../../components/ButtonCardMedico/ButtonCardMedico";
 
 export const SelecionarMedico = () => {
 
@@ -11,23 +14,18 @@ export const SelecionarMedico = () => {
     const [medico, setMedico] = useState([
         {
             id: "1",
-            name: "Clínica Natureh",
-            especialidade: "",
+            name: "Dra Alessandra",
+            especialidade: "Demartologa, Esteticista",
         },
         {
             id: "2",
-            name: "Diamond Pró-Mulher",
-            especialidade: "",
+            name: "Dr Kumushiro",
+            especialidade: "Cirurgião, Cardiologista",
         },
         {
             id: "3",
-            name: "Clinica Villa Lobos",
-            especialidade: "",
-        },
-        {
-            id: "4",
-            name: "SP Oncologia Clínica",
-            especialidade: "",
+            name: "Dr Rodrigo Santos",
+            especialidade: "Clínico, Pediatra",
         },
     ]);
 

@@ -15,6 +15,7 @@ import { Home } from './src/Screens/Home/Home';
 import { InsercaoProntuario } from './src/Screens/InsercaoProntuario/InsercaoProntuario';
 import { HomePaciente} from './src/Screens/HomePaciente/HomePaciente';
 import { SelecionaClinica } from './src/Screens/SelecionaClinica/SelecionaClinica';
+import { SelecionarMedico } from './src/Screens/SelecionarMedico/SelecionarMedico';
 
 
 
@@ -100,6 +101,11 @@ export default function App() {
             name="SelecionaClinica"
             component={SelecionaClinica}
             options={{title:"SelecionaClinica"}}
+          />
+          <Stack.Screen
+            name="SelecionarMedico"
+            component={SelecionarMedico}
+            options={{title:"SelecionarMedico"}}
           />
         </Stack.Navigator>
       </NavigationContainer>
