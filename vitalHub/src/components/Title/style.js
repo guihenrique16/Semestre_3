@@ -11,6 +11,11 @@ export const Title = styled.Text`
 export const TitleCheck = styled(Title)`
     margin-top: 25px;
 `
+export const TitleSelect = styled(Title)`
+    margin-top: 25px;
+    margin-bottom: 40px;
+    color: #344F8F;
+`
 export const TitleModal = styled(Title)`
     color: #344F8F;
     margin-top: 30px;

@@ -44,3 +44,4 @@ export const ButtonEditInsercao = styled(ButtonSairPerfil)`
     margin-bottom: none;
     margin-top: 30px;
 `
+

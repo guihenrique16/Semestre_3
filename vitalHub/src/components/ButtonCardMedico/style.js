@@ -12,7 +12,8 @@ export const ButtonContent = styled.TouchableOpacity`
     shadow-radius: 15px;
     elevation: 10;
     background-color: white;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+    padding: 11px 0px 0px 10px;
     
     ${props => props.ClickButton ? css`
         border: 2px solid #496BBA;

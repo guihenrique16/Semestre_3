@@ -14,7 +14,7 @@ export const ButtonCardMedico = ({
                 ClickButton={selected}
             >
 
-                <ImageCardMedico />
+                <ImageCardMedico source={require("../../../assets/Perfil.jpg")}/>
 
                 <DataProfileCard>
                     <NameMedico>{name}</NameMedico>
