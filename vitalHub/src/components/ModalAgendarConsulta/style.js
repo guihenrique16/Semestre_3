@@ -12,6 +12,7 @@ export const ModalContent = styled.View`
     border-radius: 10px;
     background-color: white;
     align-items: center;
+    gap: 20px;
 `
 export const TitleModal = styled.Text`
     font-size: 20px;
@@ -22,11 +23,14 @@ export const ModalText = styled.Text`
     font-size: 16px;
     font-family: "Quicksand_500Medium";
     color: #000000;
+    width: 280px;
+    text-align: center;
 `
 export const TitleForm = styled.Text`
     font-size: 16px;
     font-family: "Quicksand_600SemiBold";
     color: #33303E;
+    margin-top: 30px;
 `
 export const ModalTextForm = styled.Text`
     font-size: 14px;
