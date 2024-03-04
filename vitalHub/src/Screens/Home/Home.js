@@ -69,7 +69,7 @@ export const Home = () => {
                             informacao={item}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
-
+                            
                         />
                     )
                 }

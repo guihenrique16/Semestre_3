@@ -5,8 +5,6 @@ import { FontAwesome5 } from '@expo/vector-icons';
 export const Navegacao = ({navigation}) => {
     return(
         <ContainerNavigation>
-            <FontAwesome5 name="hospital-symbol" size={45} color="black" />
-
             <Button
                 title="Login"
                 onPress={() => navigation.navigate("Login")}
@@ -54,6 +52,10 @@ export const Navegacao = ({navigation}) => {
             <Button
                 title="Selecionar Data"
                 onPress={() => navigation.navigate("SelecionarData")}
+            />
+            <Button
+                title="Localizacao"
+                onPress={() => navigation.navigate("PlaceConsult")}
             />
         </ContainerNavigation>
     )

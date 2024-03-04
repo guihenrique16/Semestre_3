@@ -5,17 +5,18 @@ export const AppointmentCard = ({
     situacao = "pendente",
     onPressCancel,
     onPressAppointment,
-    informacao
+    informacao,
+    onPressDoctor
 }) => {
     return (
         <ContainerCardList>
 
-            <ProfileImage source={require("../../../assets/Perfil.jpg")} />
+            <ProfileImage source={require("../../../assets/Perfil.jpg")}/>
 
             <ContentCard>
                 <DataProfileCard>
 
-                    <ProfileName>{informacao.name}</ProfileName>
+                    <ProfileName onPress={onPressDoctor}>{informacao.name}</ProfileName>
 
                     <ProfileData>
                         <TextAge>22 Anos</TextAge>

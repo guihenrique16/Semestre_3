@@ -61,3 +61,4 @@ export const MainContentScroll = styled.ScrollView`
 export const ContainerForm = styled.View`
     width: 90%;
 `
+

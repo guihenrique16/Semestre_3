@@ -10,17 +10,18 @@ import { CancelationModal } from "../../components/CancelationModal/CancelationM
 import { ProntuarioModal } from "../../components/ProntuarioModal/ProntuarioModal"
 import { Stethoscope } from "../../components/Stethoscope/Stethoscope"
 import { ScheduleModal } from "../../components/ScheduleModal/ScheduleModal"
+import { DoctorModal } from "../../components/DoctorModal/DoctorModal"
 
 const Consultas = [
-    { id: "1", name: "Guilherme", situacao: "pendente" },
-    { id: "2", name: "Gelipe", situacao: "realizado" },
-    { id: "3", name: "Felix", situacao: "cancelado" },
-    { id: "4", name: "Mumu", situacao: "cancelado" },
-    { id: "5", name: "Arteta", situacao: "cancelado" },
-    { id: "6", name: "Arteta", situacao: "cancelado" },
-    { id: "7", name: "Arteta", situacao: "cancelado" },
-    { id: "8", name: "Arteta", situacao: "cancelado" },
-    { id: "9", name: "Conha", situacao: "realizado" }
+    { id: "1", name: "Dr.Claudio", situacao: "pendente" },
+    { id: "2", name: "Dr.Gelipe", situacao: "realizado" },
+    { id: "3", name: "Dr.Felix", situacao: "cancelado" },
+    { id: "4", name: "Dr.Mumu", situacao: "cancelado" },
+    { id: "5", name: "Dr.Arteta", situacao: "cancelado" },
+    { id: "6", name: "Dr.Arteta", situacao: "cancelado" },
+    { id: "7", name: "Dr.Arteta", situacao: "cancelado" },
+    { id: "8", name: "Dr.Arteta", situacao: "cancelado" },
+    { id: "9", name: "Dr.Conha", situacao: "realizado" }
 ]
 
 export const HomePaciente = () => {
@@ -30,6 +31,8 @@ export const HomePaciente = () => {
     const [showModalCancel, setShowModalCancel] = useState(false);
     const [showModalAppointment, setShowModalAppointment] = useState(false);
     const [showModalSchedule, setShowModalSchedule] = useState(false);
+    const [showModalDoctor, setShowModalDoctor] = useState(false);
+    const [info, setInfo] = useState({})
 
     return (
         <ContainerPerfil>
@@ -70,6 +73,7 @@ export const HomePaciente = () => {
                             situacao={item.situacao}
                             informacao={item}
                             onPressCancel={() => setShowModalCancel(true)}
+                            onPressDoctor={() => {setShowModalDoctor(true); setInfo(item)}}
                             onPressAppointment={() => setShowModalAppointment(true)}
 
                         /> 
@@ -96,6 +100,12 @@ export const HomePaciente = () => {
             <ScheduleModal
                 visible={showModalSchedule}
                 setShowModalSchedule={setShowModalSchedule}
+            />
+
+            <DoctorModal
+                visible={showModalDoctor}
+                setShowModalDoctor={setShowModalDoctor}
+                informacao={info}
             />
 
 
