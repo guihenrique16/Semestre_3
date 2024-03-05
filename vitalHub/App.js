@@ -13,11 +13,13 @@ import { Cadastro } from './src/Screens/Cadastro/Cadastro';
 import { Perfil } from './src/Screens/Perfil/Perfil';
 import { Home } from './src/Screens/Home/Home';
 import { InsercaoProntuario } from './src/Screens/InsercaoProntuario/InsercaoProntuario';
-import { HomePaciente} from './src/Screens/HomePaciente/HomePaciente';
+import { HomePaciente } from './src/Screens/HomePaciente/HomePaciente';
 import { SelecionaClinica } from './src/Screens/SelecionaClinica/SelecionaClinica';
 import { SelecionarMedico } from './src/Screens/SelecionarMedico/SelecionarMedico';
 import { SelecionarData } from './src/Screens/SelecionarData/selecionarData';
 import { PlaceConsult } from './src/Screens/PlaceConsult/PlaceConsult';
+import { Prescricao } from './src/Screens/Prescricao/Prescricao';
+import { Main } from './src/Screens/Main/Main';
 
 
 
@@ -40,88 +42,100 @@ export default function App() {
   }
 
   return (
-      //Container - envolve toda a estrutura da tela 
-        //Navigator - componenete para navegacao
-          //Screen - tela
-            //name: nome da tela 
-            //component: componenete que sera chamado 
-            //options:   
+    //Container - envolve toda a estrutura da tela 
+    //Navigator - componenete para navegacao
+    //Screen - tela
+    //name: nome da tela 
+    //component: componenete que sera chamado 
+    //options:   
 
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Navegacao"
-            component={Navegacao}
-            options={{title:"Navegacao"}}
-          />
-          <Stack.Screen
-            name="Login"
-            component={Login}
-            options={{title:"Login"}}
-          />
-          <Stack.Screen
-            name="RecoverSenha"
-            component={RecoverSenha}
-            options={{title:"RecoverSenha"}}
-          />
-          <Stack.Screen
-            name="CheckEmail"
-            component={CheckEmail}
-            options={{title:"CheckEmail"}}
-          />
-          <Stack.Screen
-            name="ChangeSenha"
-            component={ChangeSenha}
-            options={{title:"ChangeSenha"}}
-          />
-          <Stack.Screen
-            name="Cadastro"
-            component={Cadastro}
-            options={{title:"Cadastro"}}
-          />
-          <Stack.Screen
-            name="Perfil"
-            component={Perfil}
-            options={{title:"Perfil"}}
-          />
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{title:"Home"}}
-          />
-          <Stack.Screen
-            name="InsercaoProntuario"
-            component={InsercaoProntuario}
-            options={{title:"InsercaoProntuario"}}
-          />
-          <Stack.Screen
-            name="HomePaciente"
-            component={HomePaciente}
-            options={{title:"HomePaciente"}}
-          />
-          <Stack.Screen
-            name="SelecionaClinica"
-            component={SelecionaClinica}
-            options={{title:"SelecionaClinica"}}
-          />
-          <Stack.Screen
-            name="SelecionarMedico"
-            component={SelecionarMedico}
-            options={{title:"SelecionarMedico"}}
-          />
-          <Stack.Screen
-            name="SelecionarData"
-            component={SelecionarData}
-            options={{title:"SelecionarData"}}
-          />
-          <Stack.Screen
-            name="PlaceConsult"
-            component={PlaceConsult}
-            options={{title:"PlaceConsult"}}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
- 
+    <NavigationContainer>
+      <Stack.Navigator>
+
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{ title: "Login" }}
+        />
+        
+        <Stack.Screen
+          name='Main'
+          component={Main}
+        />
+
+        <Stack.Screen
+          name="Navegacao"
+          component={Navegacao}
+          options={{ title: "Navegacao" }}
+        />
+        <Stack.Screen
+          name="RecoverSenha"
+          component={RecoverSenha}
+          options={{ title: "RecoverSenha" }}
+        />
+        <Stack.Screen
+          name="CheckEmail"
+          component={CheckEmail}
+          options={{ title: "CheckEmail" }}
+        />
+        <Stack.Screen
+          name="ChangeSenha"
+          component={ChangeSenha}
+          options={{ title: "ChangeSenha" }}
+        />
+        <Stack.Screen
+          name="Cadastro"
+          component={Cadastro}
+          options={{ title: "Cadastro" }}
+        />
+        <Stack.Screen
+          name="Perfil"
+          component={Perfil}
+          options={{ title: "Perfil" }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Home" }}
+        />
+        <Stack.Screen
+          name="InsercaoProntuario"
+          component={InsercaoProntuario}
+          options={{ title: "InsercaoProntuario" }}
+        />
+        <Stack.Screen
+          name="HomePaciente"
+          component={HomePaciente}
+          options={{ title: "HomePaciente" }}
+        />
+        <Stack.Screen
+          name="SelecionaClinica"
+          component={SelecionaClinica}
+          options={{ title: "SelecionaClinica" }}
+        />
+        <Stack.Screen
+          name="SelecionarMedico"
+          component={SelecionarMedico}
+          options={{ title: "SelecionarMedico" }}
+        />
+        <Stack.Screen
+          name="SelecionarData"
+          component={SelecionarData}
+          options={{ title: "SelecionarData" }}
+        />
+        <Stack.Screen
+          name="PlaceConsult"
+          component={PlaceConsult}
+          options={{ title: "PlaceConsult" }}
+        />
+        <Stack.Screen
+          name="Prescricao"
+          component={Prescricao}
+          options={{ title: "Prescricao" }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+
   );
 
 }

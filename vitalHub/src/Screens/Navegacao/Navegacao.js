@@ -1,6 +1,7 @@
 import { Button } from "react-native"
 import { ContainerNavigation } from "../../components/Container/style"
 import { FontAwesome5 } from '@expo/vector-icons';
+import { NavigationContainer } from "@react-navigation/native";
 
 export const Navegacao = ({navigation}) => {
     return(
@@ -50,12 +51,16 @@ export const Navegacao = ({navigation}) => {
                 onPress={() => navigation.navigate("SelecionarMedico")}
             />
             <Button
-                title="Selecionar Data"
+                title="Selecionar Data" 
                 onPress={() => navigation.navigate("SelecionarData")}
             />
             <Button
                 title="Localizacao"
                 onPress={() => navigation.navigate("PlaceConsult")}
+            />
+            <Button
+                title="Prescricao"
+                onPress={() => navigation.navigate("Prescricao")}
             />
         </ContainerNavigation>
     )

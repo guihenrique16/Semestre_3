@@ -10,7 +10,12 @@ import { ButtonTitleGoogle } from "../../components/ButtonTitleGoogle/style"
 import { AntDesign } from '@expo/vector-icons';
 
 
-export const Login = () => {
+export const Login = ({navigation}) => {
+    
+    async function Login() {
+        navigation.navigate('Main')
+    }
+
     return (
         <Container>
 
@@ -27,7 +32,7 @@ export const Login = () => {
 
             <LinkMedium>Esqueceu sua senha?</LinkMedium>
 
-            <Button>
+            <Button onPress={(e) => Login()}>
                 <ButtonTitle>Entrar</ButtonTitle>
             </Button>
 

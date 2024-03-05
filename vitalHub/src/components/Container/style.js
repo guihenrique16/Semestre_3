@@ -25,9 +25,9 @@ export const Container = styled.SafeAreaView`
 export const ContainerNavigation = styled(Container)`
     flex: 1;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    background-color: #49B3BA;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 50px;
 `
 export const ContainerPerfil = styled(Container)`
     background-color: #ffff;
@@ -36,11 +36,23 @@ export const ContainerInputPerfil = styled.View`
     flex: 1;
     width: 90%;
     align-items: center;
+    justify-content: center;
     background-color: #ffff;
     /* margin-left: 25px; */
     gap: 20px;
     margin-bottom: 20px;
 `
+export const ContainerInputPresc = styled(ContainerInputPerfil)`
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+    /* margin-left: 25px; */
+    gap: 20px;
+    margin-bottom: 20px;
+`
+
 export const ContainerInputRow = styled(ContainerPerfil)`
     flex-direction: row;
     gap: 10px;

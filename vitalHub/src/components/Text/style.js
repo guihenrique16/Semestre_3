@@ -12,3 +12,6 @@ export const SubTitle = styled.Text`
 export const SubTitlePerfil = styled(SubTitle)`
     margin-bottom: 25px;
 `
+export const SubTitlePresc = styled(SubTitle)`
+    margin-bottom: 25px;
+`

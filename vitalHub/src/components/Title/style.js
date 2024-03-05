@@ -25,5 +25,12 @@ export const TitlePerfil = styled(Title)`
     margin-top: 25px;
     color: #33303E;
 `
+export const TitlePresc = styled.Text`
+    font-size: 20px;
+    font-family: "MontserratAlternates_600SemiBold";
+    color: #33303E;
+    margin-top: 20px;
+    text-align: center;
 
+`
 

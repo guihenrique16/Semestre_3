@@ -44,4 +44,12 @@ export const ButtonEditInsercao = styled(ButtonSairPerfil)`
     margin-bottom: none;
     margin-top: 30px;
 `
-
+export const ButtonPrescricao = styled.TouchableOpacity`
+    width: 54%;
+    height: 44px;
+    background-color: #49B3BA;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row;
+`
