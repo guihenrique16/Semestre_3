@@ -7,7 +7,7 @@ import { TitleModal, TitleSelect } from "../../components/Title/style";
 import { ListComponent } from "../../components/List/list";
 import { ButtonCardMedico } from "../../components/ButtonCardMedico/ButtonCardMedico";
 
-export const SelecionarMedico = () => {
+export const SelecionarMedico = ({navigation}) => {
 
     const [selected, setSelected] = useState("")
 
@@ -55,11 +55,11 @@ export const SelecionarMedico = () => {
                         scrollEnabled={false}
                     />
 
-                    <ButtonRecover>
+                    <ButtonRecover onPress={() => navigation.navigate("SelecionarData")}>
                         <ButtonTitle>Continuar</ButtonTitle>
                     </ButtonRecover>
 
-                    <LinkEndModal>Cancelar</LinkEndModal>
+                    <LinkEndModal onPress={() => navigation.replace("Main")}>Cancelar</LinkEndModal>
                 </MainContent>
             </MainContentScroll>
         </ContainerPerfil>

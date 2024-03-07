@@ -9,6 +9,7 @@ import { ButtonTitle } from "../ButtonTitle/style"
 
 
 export const ScheduleModal = ({
+    navigation,
     visible,
     setShowModalSchedule,
     ...rest
@@ -50,7 +51,7 @@ export const ScheduleModal = ({
                     </ContainerForm>
 
 
-                    <ModalButton>
+                    <ModalButton onPress={() => navigation.navigate("SelecionaClinica")}>
                         <ButtonTitle>Continuar</ButtonTitle>
                     </ModalButton>
 

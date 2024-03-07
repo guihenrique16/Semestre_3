@@ -8,8 +8,23 @@ import { ListComponent } from "../../components/List/list"
 import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard"
 import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
 import { ProntuarioModal } from "../../components/ProntuarioModal/ProntuarioModal"
+import { Stethoscope } from "../../components/Stethoscope/Stethoscope"
+import { ScheduleModal } from "../../components/ScheduleModal/ScheduleModal"
+import { DoctorModal } from "../../components/DoctorModal/DoctorModal"
 
 const Consultas = [
+    { id: "1", name: "Dr.Claudio", situacao: "pendente" },
+    { id: "2", name: "Dr.Gelipe", situacao: "realizado" },
+    { id: "3", name: "Dr.Felix", situacao: "cancelado" },
+    { id: "4", name: "Dr.Mumu", situacao: "cancelado" },
+    { id: "5", name: "Dr.Arteta", situacao: "cancelado" },
+    { id: "6", name: "Dr.Arteta", situacao: "cancelado" },
+    { id: "7", name: "Dr.Arteta", situacao: "cancelado" },
+    { id: "8", name: "Dr.Arteta", situacao: "cancelado" },
+    { id: "9", name: "Dr.Conha", situacao: "realizado" }
+]
+
+const Paciente = [
     { id: "1", name: "Guilherme", situacao: "pendente" },
     { id: "2", name: "Gelipe", situacao: "realizado" },
     { id: "3", name: "Felix", situacao: "cancelado" },
@@ -21,20 +36,25 @@ const Consultas = [
     { id: "9", name: "Conha", situacao: "realizado" }
 ]
 
-export const Home = () => {
+export const Home = ({
+    navigation
+}) => {
 
     const [statusLista, setStatusLista] = useState("pendente")
 
     const [showModalCancel, setShowModalCancel] = useState(false);
     const [showModalAppointment, setShowModalAppointment] = useState(false);
-    
+    const [showModalSchedule, setShowModalSchedule] = useState(false);
+    const [showModalDoctor, setShowModalDoctor] = useState(false);
+    const [info, setInfo] = useState({})
+    const [PacienteOuN, setPacienteOuN] = useState(true)
 
     return (
         <ContainerPerfil>
 
             <Header/>
 
-            <CalendarHome/>
+            <CalendarHome />
 
             <FilterAppointment>
 
@@ -58,24 +78,46 @@ export const Home = () => {
 
             </FilterAppointment>
 
-            <ListComponent
-                data={Consultas}
-                keyExtractor={(item) => item.id}
+            {PacienteOuN ?
+                <ListComponent
+                    data={Consultas}
+                    keyExtractor={(item) => item.id}
 
-                renderItem={({item}) =>
-                    statusLista == item.situacao && (
-                        <AppointmentCard
-                            situacao={item.situacao}
-                            informacao={item}
-                            onPressCancel={() => setShowModalCancel(true)}
-                            onPressAppointment={() => setShowModalAppointment(true)}
-                            
-                        />
-                    )
-                }
+                    renderItem={({ item }) =>
+                        statusLista == item.situacao ? (
+                            <AppointmentCard
+                                situacao={item.situacao}
+                                informacao={item}
+                                onPressCancel={() => setShowModalCancel(true)}
+                                onPressDoctor={() => { setShowModalDoctor(true); setInfo(item) }}
+                                onPressAppointment={() => PacienteOuN ? navigation.navigate("Prescricao") : setShowModalAppointment(true)}
 
-                showsVerticalScrollIndicator={false}
-            />
+                            />
+                        ) : null
+                    }
+
+                    showsVerticalScrollIndicator={false}
+                />
+                :
+                <ListComponent
+                    data={Paciente}
+                    keyExtractor={(item) => item.id}
+
+                    renderItem={({ item }) =>
+                        statusLista == item.situacao && (
+                            <AppointmentCard
+                                situacao={item.situacao}
+                                informacao={item}
+                                onPressCancel={() => setShowModalCancel(true)}
+                                onPressAppointment={() => setShowModalAppointment(true)}
+
+                            />
+                        )
+                    }
+
+                    showsVerticalScrollIndicator={false}
+                />
+            }
 
             <CancelationModal
                 visible={showModalCancel}
@@ -83,9 +125,33 @@ export const Home = () => {
             />
 
             <ProntuarioModal
+                navigation={navigation}
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
             />
+
+            {PacienteOuN ? 
+                <Stethoscope
+                    onPress={() => setShowModalSchedule(true)}
+                /> 
+                : null 
+            }
+
+
+            <ScheduleModal
+                navigation={navigation}
+                visible={showModalSchedule}
+                setShowModalSchedule={setShowModalSchedule}
+            />
+
+            <DoctorModal
+                navigation={navigation}
+                visible={showModalDoctor}
+                setShowModalDoctor={setShowModalDoctor}
+                informacao={info}
+            />
+
+
 
         </ContainerPerfil>
     )

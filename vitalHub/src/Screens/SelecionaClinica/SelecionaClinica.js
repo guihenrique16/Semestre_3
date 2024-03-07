@@ -9,7 +9,9 @@ import { LinkEndModal } from "../../components/Link/style"
 
 
 
-export const SelecionaClinica = () => {
+export const SelecionaClinica = ({
+    navigation
+}) => {
     const [selected, setSelected] = useState("")
     const [nameClinic, setNameClinic]= useState("")
 
@@ -71,11 +73,11 @@ export const SelecionaClinica = () => {
                         scrollEnabled={false}
                     />
 
-                    <Button>
+                    <Button onPress={() => navigation.navigate("SelecionarMedico")}>
                         <ButtonTitle>Continuar</ButtonTitle>
                     </Button>
 
-                    <LinkEndModal>Cancelar</LinkEndModal>
+                    <LinkEndModal onPress={() => navigation.replace("Main")}>Cancelar</LinkEndModal>
                 </MainContent>
             </MainContentScroll>
         </ContainerPerfil>

@@ -10,11 +10,13 @@ import { ButtonTitle } from "../../components/ButtonTitle/style";
 import { LinkEnd } from "../../components/Link/style";
 
 
-export const RecoverSenha = () => {
+export const RecoverSenha = ({navigation}) => {
     return (
         <Container>
             <BoxArrow>
-                <AntDesign name="arrowleft" size={24} color="#FFFF" />
+                <AntDesign name="arrowleft" size={24} color="#FFFF" 
+                    onPress={() => navigation.navigate("Login")}
+                />
             </BoxArrow>
 
             <Logo source={require("../../../assets/VitalHub_Logo 2.png")} />
@@ -27,11 +29,11 @@ export const RecoverSenha = () => {
                 placeholder="Usuario ou E-mail"
             />
 
-            <ButtonRecover>
+            <ButtonRecover onPress={() => navigation.navigate("CheckEmail")}>
                 <ButtonTitle>Continuar</ButtonTitle>
             </ButtonRecover>
 
-            <LinkEnd>Cancelar</LinkEnd>
+            <LinkEnd onPress={() => navigation.navigate("Login")}>Cancelar</LinkEnd>
 
 
         </Container>

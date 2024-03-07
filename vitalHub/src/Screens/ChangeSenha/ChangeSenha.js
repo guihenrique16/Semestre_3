@@ -9,11 +9,13 @@ import { Input, InputRecover } from "../../components/Input/style";
 import { ButtonTitle } from "../../components/ButtonTitle/style";
 import { ButtonRecover } from "../../components/Button/style";
 
-export const ChangeSenha = () => {
+export const ChangeSenha = ({navigation}) => {
     return (
         <Container>
             <BoxArrow>
-                <AntDesign name="close" size={24} color="#FFFF" />
+                <AntDesign name="close" size={24} color="#FFFF" 
+                    onPress={() => navigation.replace("Login")}
+                />
             </BoxArrow>
 
             <Logo source={require("../../../assets/VitalHub_Logo 2.png")} />
@@ -29,7 +31,7 @@ export const ChangeSenha = () => {
                 placeholder="Confirmar nova senha"
             />
 
-            <ButtonRecover>
+            <ButtonRecover onPress={() => navigation.navigate("Login")}>
                 <ButtonTitle>Confirmar nova senha</ButtonTitle>
             </ButtonRecover>
 

@@ -3,7 +3,7 @@ import { ContainerMap, ContainerPerfil, MainContent, MainContentScroll } from ".
 import { LinkEndModal } from "../../components/Link/style"
 import { ImageMaps, TextMap, TitleMap, ViewInputRow } from "./style"
 
-export const PlaceConsult = () => {
+export const PlaceConsult = ({navigation}) => {
     return (
         <ContainerPerfil>
             <MainContentScroll>
@@ -38,7 +38,7 @@ export const PlaceConsult = () => {
 
                     </ViewInputRow>
 
-                    <LinkEndModal>voltar</LinkEndModal>
+                    <LinkEndModal onPress={() => navigation.replace("Main")}>voltar</LinkEndModal>
 
                 </MainContent>
             </MainContentScroll>

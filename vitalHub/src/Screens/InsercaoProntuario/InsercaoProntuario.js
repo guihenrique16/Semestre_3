@@ -7,7 +7,7 @@ import { ImagePerfil } from "../../components/Logo/style"
 import { SubTitlePerfil } from "../../components/Text/style"
 import { TitlePerfil } from "../../components/Title/style"
 
-export const InsercaoProntuario = () => {
+export const InsercaoProntuario = ({navigation}) => {
     return (
         <ContainerPerfil>
             <MainContentScroll>
@@ -43,14 +43,14 @@ export const InsercaoProntuario = () => {
 
                     </ContainerForm>
 
-                    <Button>
+                    <Button onPress={() => navigation.navigate("Home")}>
                         <ButtonTitle>Salvar</ButtonTitle>
                     </Button>
                     <ButtonEditInsercao>
                         <ButtonTitle>Editar</ButtonTitle>
                     </ButtonEditInsercao>
 
-                    <LinkEndModal>Cancelar</LinkEndModal>
+                    <LinkEndModal onPress={() => navigation.replace("Home")}>Cancelar</LinkEndModal>
 
 
                 </MainContent>

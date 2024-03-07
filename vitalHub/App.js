@@ -13,7 +13,6 @@ import { Cadastro } from './src/Screens/Cadastro/Cadastro';
 import { Perfil } from './src/Screens/Perfil/Perfil';
 import { Home } from './src/Screens/Home/Home';
 import { InsercaoProntuario } from './src/Screens/InsercaoProntuario/InsercaoProntuario';
-import { HomePaciente } from './src/Screens/HomePaciente/HomePaciente';
 import { SelecionaClinica } from './src/Screens/SelecionaClinica/SelecionaClinica';
 import { SelecionarMedico } from './src/Screens/SelecionarMedico/SelecionarMedico';
 import { SelecionarData } from './src/Screens/SelecionarData/selecionarData';
@@ -55,83 +54,84 @@ export default function App() {
         <Stack.Screen
           name="Login"
           component={Login}
-          options={{ title: "Login" }}
+          options={{ title: "Login", headerShown: false }}
         />
         
         <Stack.Screen
           name='Main'
           component={Main}
+          options={{ title: "Main", headerShown: false }}
         />
 
         <Stack.Screen
           name="Navegacao"
           component={Navegacao}
-          options={{ title: "Navegacao" }}
+          options={{ title: "Navegacao", headerShown: false  }}
         />
         <Stack.Screen
           name="RecoverSenha"
           component={RecoverSenha}
-          options={{ title: "RecoverSenha" }}
+          options={{ title: "RecoverSenha", headerShown: false  }}
         />
         <Stack.Screen
           name="CheckEmail"
           component={CheckEmail}
-          options={{ title: "CheckEmail" }}
+          options={{ title: "CheckEmail", headerShown: false  }}
         />
         <Stack.Screen
           name="ChangeSenha"
           component={ChangeSenha}
-          options={{ title: "ChangeSenha" }}
+          options={{ title: "ChangeSenha", headerShown: false  }}
         />
         <Stack.Screen
           name="Cadastro"
           component={Cadastro}
-          options={{ title: "Cadastro" }}
+          options={{ title: "Cadastro", headerShown: false  }}
         />
         <Stack.Screen
           name="Perfil"
           component={Perfil}
-          options={{ title: "Perfil" }}
+          options={{ title: "Perfil", headerShown: false  }}
+        />
+        {/* <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Home" }}
+        /> */}
+        <Stack.Screen
+          name="InsercaoProntuario"
+          component={InsercaoProntuario}
+          options={{ title: "InsercaoProntuario", headerShown: false  }}
         />
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{ title: "Home" }}
-        />
-        <Stack.Screen
-          name="InsercaoProntuario"
-          component={InsercaoProntuario}
-          options={{ title: "InsercaoProntuario" }}
-        />
-        <Stack.Screen
-          name="HomePaciente"
-          component={HomePaciente}
-          options={{ title: "HomePaciente" }}
+          options={{ title: "Home", headerShown: false  }}
         />
         <Stack.Screen
           name="SelecionaClinica"
           component={SelecionaClinica}
-          options={{ title: "SelecionaClinica" }}
+          options={{ title: "SelecionaClinica", headerShown: false  }}
         />
         <Stack.Screen
           name="SelecionarMedico"
           component={SelecionarMedico}
-          options={{ title: "SelecionarMedico" }}
+          options={{ title: "SelecionarMedico", headerShown: false  }}
         />
         <Stack.Screen
           name="SelecionarData"
           component={SelecionarData}
-          options={{ title: "SelecionarData" }}
+          options={{ title: "SelecionarData", headerShown: false  }}
         />
         <Stack.Screen
           name="PlaceConsult"
           component={PlaceConsult}
-          options={{ title: "PlaceConsult" }}
+          options={{ title: "PlaceConsult", headerShown: false  }}
         />
         <Stack.Screen
           name="Prescricao"
           component={Prescricao}
-          options={{ title: "Prescricao" }}
+          options={{ title: "Prescricao", headerShown: false  }}
         />
       </Stack.Navigator>
     </NavigationContainer>

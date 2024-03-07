@@ -9,11 +9,13 @@ import { LinkEnd } from "../../components/Link/style";
 import { ButtonRecover } from "../../components/Button/style";
 import { ButtonTitle } from "../../components/ButtonTitle/style";
 
-export const CheckEmail = () => {
+export const CheckEmail = ({navigation}) => {
     return (
         <Container>
             <BoxArrow>
-                <AntDesign name="close" size={24} color="#FFFF" />
+                <AntDesign name="close" size={24} color="#FFFF" 
+                    onPress={() => navigation.navigate("Login")}
+                />
             </BoxArrow>
 
             <Logo source={require("../../../assets/VitalHub_Logo 2.png")} />
@@ -30,7 +32,7 @@ export const CheckEmail = () => {
                 <InputVerify placeholder="0" />
             </BoxInput>
 
-            <ButtonRecover>
+            <ButtonRecover onPress={() => navigation.navigate("ChangeSenha")}>
                 <ButtonTitle>Entrar</ButtonTitle>
             </ButtonRecover>
 

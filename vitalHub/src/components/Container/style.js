@@ -8,7 +8,7 @@ export const ContainerHeader = styled(LinearGradient).attrs({
     end:{x:1, y:0}
 })`
     width:100%;
-    height: 102px;
+    height: 150px;
     justify-content: center;
     padding: 20px 20px 22px 20px;
     border-radius: 0px 0px 15px 15px;
@@ -74,3 +74,11 @@ export const ContainerForm = styled.View`
     width: 90%;
 `
 
+export const ContentAccount = styled.View`
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 5px;
+`

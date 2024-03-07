@@ -1,13 +1,14 @@
-import { Container } from "../../components/Container/style"
+import { Container, ContentAccount } from "../../components/Container/style"
 import { Logo } from "../../components/Logo/style"
 import { Title } from "../../components/Title/style"
 import { Input } from "../../components/Input/style"
-import { LinkMedium } from "../../components/Link/style"
+import { LinkEnd, LinkMedium } from "../../components/Link/style"
 import { ButtonTitle } from "../../components/ButtonTitle/style"
 import { Button, ButtonGoogle } from "../../components/Button/style"
 import { ButtonTitleGoogle } from "../../components/ButtonTitleGoogle/style"
 
 import { AntDesign } from '@expo/vector-icons';
+import { TextAccount } from "./style"
 
 
 export const Login = ({navigation}) => {
@@ -30,7 +31,7 @@ export const Login = ({navigation}) => {
                 placeholder="Senha"
             />
 
-            <LinkMedium>Esqueceu sua senha?</LinkMedium>
+            <LinkMedium onPress={() => navigation.navigate("RecoverSenha")}>Esqueceu sua senha?</LinkMedium>
 
             <Button onPress={(e) => Login()}>
                 <ButtonTitle>Entrar</ButtonTitle>
@@ -42,9 +43,10 @@ export const Login = ({navigation}) => {
                 <ButtonTitleGoogle>Entrar com google</ButtonTitleGoogle>
             </ButtonGoogle>
 
-            {/* <ContentAccount>
-                <textAccount>Nao tem conta? Crie uma conta agora!</textAccount>
-            </ContentAccount> */}
+            <ContentAccount>
+                <TextAccount>Nao tem conta?</TextAccount>
+                <LinkEnd onPress={() => navigation.navigate("Cadastro")}>Crie uma conta agora!</LinkEnd>
+            </ContentAccount> 
 
         </Container>
     )

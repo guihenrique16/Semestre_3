@@ -6,6 +6,7 @@ import { LinkEndModal } from "../Link/style"
 import { BoxModal, ModalContent, ModalImage, ModalText, PatientModal } from "./style"
 
 export const ProntuarioModal = ({
+    navigation,
     visible,
     setShowModalAppointment,
     ...rest
@@ -30,11 +31,11 @@ export const ProntuarioModal = ({
                         <ModalText>gelipe.fois@gmail.com</ModalText>
                     </BoxModal>
 
-                    <ModalButton>
+                    <ModalButton onPress={() => navigation.navigate("InsercaoProntuario")}>
                         <ButtonTitle>Inserir Prontuario</ButtonTitle>
                     </ModalButton>
 
-                    <LinkEndModal onPress={() => setShowModalAppointment(false)}>Cancelar</LinkEndModal>
+                    <LinkEndModal onPress={() => navigation.navigate("Home")}>Cancelar</LinkEndModal>
 
                 </ModalContent>
             </PatientModal>

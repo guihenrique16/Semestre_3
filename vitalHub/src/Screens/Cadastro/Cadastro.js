@@ -8,7 +8,7 @@ import { Button } from "../../components/Button/style";
 import { ButtonTitle } from "../../components/ButtonTitle/style";
 import { LinkEnd } from "../../components/Link/style";
 
-export const Cadastro = () => {
+export const Cadastro = ({navigation}) => {
     return (
         <Container>
 
@@ -28,11 +28,11 @@ export const Cadastro = () => {
                 placeholder="Senha"
             />
 
-            <Button>
-                <ButtonTitle>Entrar</ButtonTitle>
+            <Button onPress={() => navigation.navigate("Login")}>
+                <ButtonTitle>Cadastrar</ButtonTitle>
             </Button>
 
-            <LinkEnd>Cancelar</LinkEnd>
+            <LinkEnd onPress={() => navigation.replace("Login")}>Cancelar</LinkEnd>
 
         </Container>
     );

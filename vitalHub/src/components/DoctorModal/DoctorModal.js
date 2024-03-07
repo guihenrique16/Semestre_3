@@ -6,17 +6,26 @@ import { ButtonTitle } from "../ButtonTitle/style"
 import { LinkEndModal } from "../Link/style"
 
 export const DoctorModal = ({
+    navigation,
     visible,
     setShowModalDoctor,
     informacao,
     ...rest
 }) => {
+
+    async function handleClose(){
+        await setShowModalDoctor(false)
+
+        navigation.replace("PlaceConsult")
+    }
+
     return (
         <Modal
             {...rest}
             visible={visible}
             transparent={true}
             animationType="fade"
+            animationOutTiming={0}
         >
 
             <PatientModal>
@@ -31,7 +40,7 @@ export const DoctorModal = ({
                         <ModalText>CRM-15286</ModalText>
                     </BoxModal>
 
-                    <ModalButton>
+                    <ModalButton onPress={() => handleClose()}>
                         <ButtonTitle>Ver local da consulta</ButtonTitle>
                     </ModalButton>
 

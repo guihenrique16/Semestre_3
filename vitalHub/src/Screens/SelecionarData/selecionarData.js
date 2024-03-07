@@ -10,7 +10,9 @@ import { LabelData } from "./style"
 import { ModalAgendarConsulta } from "../../components/ModalAgendarConsulta/ModalAgendarConsulta"
 
 
-export const SelecionarData = () => {
+export const SelecionarData = ({
+    navigation
+}) => {
 
     const [showModalAgendar, setShowModalAgendar] = useState(false)
 
@@ -32,7 +34,7 @@ export const SelecionarData = () => {
                 <ButtonTitle>Confirmar</ButtonTitle>
             </ButtonRecover>
 
-            <LinkEndModal>Cancelar</LinkEndModal>
+            <LinkEndModal onPress={() => navigation.replace("Main")}>Cancelar</LinkEndModal>
 
             <ModalAgendarConsulta
                 visible={showModalAgendar}

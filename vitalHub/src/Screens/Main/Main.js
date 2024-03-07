@@ -1,7 +1,6 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import { Home } from '../Home/Home';
 import { Perfil } from '../Perfil/Perfil';
-import { HomePaciente } from '../HomePaciente/HomePaciente';
 
 import {ContentIcon, TextIcon} from './style'
 
@@ -50,7 +49,7 @@ export const Main = () => {
             
             <BottomTab.Screen
                 name = "Home"
-                component={HomePaciente}
+                component={Home}
             />
             
             <BottomTab.Screen

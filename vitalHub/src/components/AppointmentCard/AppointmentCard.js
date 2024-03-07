@@ -8,6 +8,8 @@ export const AppointmentCard = ({
     informacao,
     onPressDoctor
 }) => {
+
+
     return (
         <ContainerCardList>
 
@@ -36,13 +38,13 @@ export const AppointmentCard = ({
                             <>
                             </>
                         ) : situacao == "pendente" ? (
-                            <ButtonCard >
+                            <ButtonCard>
                                 <ButtonText situacao={situacao} onPress={onPressCancel}>Cancelar</ButtonText>
                             </ButtonCard>
                         ) : (
-                            <ButtonCard >
+                            <ButtonCard>
                                 <ButtonText situacao={situacao} onPress={onPressAppointment}>Ver Prontuario</ButtonText>
-                            </ButtonCard>
+                            </ButtonCard> 
                         )
                     }
 
