@@ -23,7 +23,7 @@ export const ProfileImage = styled.Image`
     width: 77px;
     height: 80px;
     border-radius: 5px;
-    border: 1px #496BBA;
+    /* border: 1px #496BBA; */
 `
 
 export const ContentCard = styled.View`
