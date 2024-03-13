@@ -1,6 +1,7 @@
 import { BoxInput } from "../../components/BoxInput"
 import { ContainerMap, ContainerPerfil, MainContent, MainContentScroll } from "../../components/Container/style"
 import { LinkEndModal } from "../../components/Link/style"
+import { Maps } from "../../components/Maps/Maps"
 import { ImageMaps, TextMap, TitleMap, ViewInputRow } from "./style"
 
 export const PlaceConsult = ({navigation}) => {
@@ -9,7 +10,7 @@ export const PlaceConsult = ({navigation}) => {
             <MainContentScroll>
                 <MainContent>
 
-                    <ImageMaps source={require("../../assets/imageMaps.png")} />
+                    <Maps/>
 
                     <TitleMap>Clínica Natureh</TitleMap>
                     <TextMap>São Paulo, SP</TextMap>
@@ -22,7 +23,7 @@ export const PlaceConsult = ({navigation}) => {
                     />
 
                     <ViewInputRow>
-                        <BoxInput
+                        <BoxInput                            
                             fieldWidth={40}
                             fieldHeight={55}
                             textLabel='Número'
