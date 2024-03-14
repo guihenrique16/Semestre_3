@@ -8,8 +8,12 @@ import { ButtonTitle } from '../../components/ButtonTitle/style';
 import { LinkEndModal, LinkMediumPres } from '../../components/Link/style';
 import { ImagePerfil } from '../../components/Logo/style';
 import { ButtonPrescricao } from '../../components/Button/style';
+import { useState } from 'react';
 
 export const Prescricao = () => {
+
+    // const[showCamera, setShowCamera] = useState(false)
+
     return (
         <ContainerPerfil>
             <MainContentScroll>
@@ -49,7 +53,9 @@ export const Prescricao = () => {
 
                     <ContainerBoxPrescricao>
 
-                        <ButtonPrescricao>
+                        <ButtonPrescricao
+                            // onPress={() =>setShowCamera(true)}
+                        >
                             <MaterialCommunityIcons name="camera-plus-outline" size={20} color="#fff" />
                             <ButtonTitle>Enviar</ButtonTitle>
                         </ButtonPrescricao>
