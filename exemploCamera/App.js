@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { Image, Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { Camera, CameraType } from 'expo-camera';
+import * as MediaLibrary from 'expo-media-library'
+
 import { useEffect, useRef, useState } from 'react';
 
 import { FontAwesome } from '@expo/vector-icons'
@@ -16,8 +18,18 @@ export default function App() {
   useEffect(() => {
     (async () => {
       const { status: cameraStatus } = await Camera.requestCameraPermissionsAsync()
+
+      const {status: mediaStatus } = await MediaLibrary.requestPermissionsAsync()
     })();
   }, [])
+
+  async function UploadPhoto() {
+    await MediaLibrary.createAssetAsync(photo).then(() => {
+      alert('salvo')
+    }).catch(error => {
+      alert('erro')
+    })
+  }
 
   async function CapturePhoto() {
     if (cameraRef) {
@@ -30,12 +42,24 @@ export default function App() {
     }
   }
 
+   async function ClearPhoto(){
+    await MediaLibrary.deleteAssetsAsync(photo).then(()=> {
+      alert("")
+    }).catch(error => {
+      alert("erro")
+    })
+    
+    setPhoto(null)
+    setOpenModal(false)
+  }
+
   return (
     <View style={styles.container}>
       <Camera
         ref={cameraRef}
         style={styles.camera}
         type={tipoCamera}
+        
 
       // ratio='16.9'
       >
@@ -71,8 +95,15 @@ export default function App() {
           margin: 20
         }}>
 
-          <View style={{ margin: 10, flexDirection: 'row' }}>
+          <View style={{ margin: 10, flexDirection: 'row', gap: 20 }}>
             {/* Botoes */}
+            <TouchableOpacity style={styles.btnClear} onPress={() => ClearPhoto()}>
+              <FontAwesome name='trash' size={35} color='#ff0000' />
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.btnUpload} onPress={() => UploadPhoto()}>
+              <FontAwesome name='upload' size={35} color='#121212' />
+            </TouchableOpacity>
           </View>
 
           <Image
@@ -120,6 +151,20 @@ const styles = StyleSheet.create({
     backgroundColor: "#121212",
 
     justifyContent: 'center',
+    alignItems: 'center'
+  },
+  btnClear:{
+    padding: 20,
+    backgroundColor: "transparent",
+
+    justifyContent: 'center', 
+    alignItems: 'center'
+  },
+  btnUpload:{
+    padding: 20,
+    backgroundColor: "transparent",
+
+    justifyContent: 'center', 
     alignItems: 'center'
   }
 });

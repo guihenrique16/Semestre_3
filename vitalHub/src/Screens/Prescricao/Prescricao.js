@@ -9,10 +9,13 @@ import { LinkEndModal, LinkMediumPres } from '../../components/Link/style';
 import { ImagePerfil } from '../../components/Logo/style';
 import { ButtonPrescricao } from '../../components/Button/style';
 import { useState } from 'react';
+import { ModalCamera } from '../../components/ModalCamera/ModalCamera';
 
-export const Prescricao = () => {
+export const Prescricao = ({
+    navigation
+}) => {
 
-    // const[showCamera, setShowCamera] = useState(false)
+    const [showModalCamera, setShowModalCamera] = useState(false)
 
     return (
         <ContainerPerfil>
@@ -53,9 +56,7 @@ export const Prescricao = () => {
 
                     <ContainerBoxPrescricao>
 
-                        <ButtonPrescricao
-                            // onPress={() =>setShowCamera(true)}
-                        >
+                        <ButtonPrescricao onPress={() => setShowModalCamera(true)}>
                             <MaterialCommunityIcons name="camera-plus-outline" size={20} color="#fff" />
                             <ButtonTitle>Enviar</ButtonTitle>
                         </ButtonPrescricao>
@@ -77,6 +78,11 @@ export const Prescricao = () => {
                     <LinkEndModal>Voltar</LinkEndModal>
 
                 </ContainerInputPresc>
+
+                <ModalCamera
+                    visible = {showModalCamera}
+                    setShowModalCamera = {setShowModalCamera}
+                />
 
 
             </MainContentScroll>
