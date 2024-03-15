@@ -12,6 +12,7 @@ export const ModalCamera = ({
     navigation,
     visible,
     setShowModalCamera,
+    setUriCameraCapture,
     ...rest
 
 }) => {
@@ -43,6 +44,8 @@ export const ModalCamera = ({
             setPhoto(photo.uri)
             setOpenModal(true)
 
+            SendFormPhoto()
+
             console.log(photo);
 
         }
@@ -57,6 +60,10 @@ export const ModalCamera = ({
 
         setPhoto(null)
         setOpenModal(false)
+    }
+
+    async function SendFormPhoto(){
+        await setUriCameraCapture(CapturePhoto)
     }
 
     return (

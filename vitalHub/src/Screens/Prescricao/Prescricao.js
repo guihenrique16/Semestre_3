@@ -1,5 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { ContainerBoxPrescricao, Linha } from "./style"
+
+import { BoxImage, ContainerBoxPrescricao, ContainerImageProntuario, ImageProntuario, Linha, TextImage, TextTitleImage } from "./style"
 import { TitlePresc } from '../../components/Title/style';
 import { SubTitlePresc } from '../../components/Text/style';
 import { ContainerInputPresc, ContainerPerfil, MainContentScroll } from '../../components/Container/style';
@@ -8,14 +9,20 @@ import { ButtonTitle } from '../../components/ButtonTitle/style';
 import { LinkEndModal, LinkMediumPres } from '../../components/Link/style';
 import { ImagePerfil } from '../../components/Logo/style';
 import { ButtonPrescricao } from '../../components/Button/style';
+
 import { useState } from 'react';
+
 import { ModalCamera } from '../../components/ModalCamera/ModalCamera';
+
+import { FontAwesome } from '@expo/vector-icons'
+
 
 export const Prescricao = ({
     navigation
 }) => {
 
     const [showModalCamera, setShowModalCamera] = useState(false)
+    // const [uriCameraCapture, setUriCameraCapture] = useState(null)
 
     return (
         <ContainerPerfil>
@@ -46,13 +53,18 @@ export const Prescricao = ({
                         fieldHeight={"133"}
                     />
 
-                    <BoxInput
-                        fieldWidth={90}
-                        textLabel={"Exames médicos"}
-                        placeholder={"                  Nenhuma foto informada"}
-                        fieldHeight={"111"}
-                    />
-
+                    <ContainerImageProntuario>
+                        <TextTitleImage>Exames médicos</TextTitleImage>
+                        {/* {uriCameraCapture == null ?( */}
+                            <BoxImage>
+                                <FontAwesome name='image' size={25} color='#121212' />
+                                <TextImage>Nenhuma foto informada</TextImage>
+                            </BoxImage>
+                        {/* // ):(
+                            // <ImageProntuario source = {{uri: uriCameraCapture}}/>
+                            // <></>
+                        // )} */}
+                    </ContainerImageProntuario>
 
                     <ContainerBoxPrescricao>
 
@@ -81,6 +93,7 @@ export const Prescricao = ({
 
                 <ModalCamera
                     visible = {showModalCamera}
+                    // setUriCameraCapture={setUriCameraCapture}
                     setShowModalCamera = {setShowModalCamera}
                 />
 
