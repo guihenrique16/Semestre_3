@@ -87,7 +87,7 @@ export const Prescricao = ({
                         fieldHeight={"103"}
                     />
 
-                    <LinkEndModal>Voltar</LinkEndModal>
+                    <LinkEndModal onPress={() => navigation.replace("Main")} >Voltar</LinkEndModal>
 
                 </ContainerInputPresc>
 

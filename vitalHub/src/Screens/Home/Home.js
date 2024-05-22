@@ -138,6 +138,7 @@ export const Home = ({
             }
 
 
+
             <ScheduleModal
                 navigation={navigation}
                 visible={showModalSchedule}

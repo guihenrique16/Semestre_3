@@ -6,30 +6,30 @@ import { LinkEndModal } from "../Link/style"
 import { ModalContent, ModalText, PatientModal } from "./style"
 
 
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+// import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-// import do audio
-import audiozap from "./assets/shooting-sound-fx-159024.wav"
+// // import do audio
+// import audiozap from "./assets/shooting-sound-fx-159024.wav"
 
-// 1º importar os recursos do expo notification
-import * as Notifications from "expo-notifications";
+// // 1º importar os recursos do expo notification
+// import * as Notifications from "expo-notifications";
 
-// 2º pedir permissão ao usuário para notificar
-Notifications.requestPermissionsAsync();
+// // 2º pedir permissão ao usuário para notificar
+// Notifications.requestPermissionsAsync();
 
-// 4º Definir como asnotificações devem ser tratadas qnd recebidas
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    //Mostar alerta quando a notificação for recebida
-    shouldShowAlert: true,
+// // 4º Definir como asnotificações devem ser tratadas qnd recebidas
+// Notifications.setNotificationHandler({
+//   handleNotification: async () => ({
+//     //Mostar alerta quando a notificação for recebida
+//     shouldShowAlert: true,
 
-    // Reproduz som ao receber notificação
-    shouldPlaySound: true,
+//     // Reproduz som ao receber notificação
+//     shouldPlaySound: true,
 
-    // Número de notificações no icone do app
-    shouldSetBadge: false
-  })
-})
+//     // Número de notificações no icone do app
+//     shouldSetBadge: false
+//   })
+// })
 
 export const CancelationModal = ({
     visible,
